@@ -1,84 +1,74 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Events!</title>
+<html lang="en-us"> 
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://bootswatch.com/4/journal/bootstrap.min.css">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+    </head>
+            
 
-  </head>
-  <body>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-2 col-md-8">
-          <div class="jumbotron">
-            <h2>User choice <span id="user-text"><strong>__</strong></span></h2>
-            <h2>Computer choice <span id="comp-text"><strong>__</strong></span></h2>
-            <h2>wins <span id="win-count"><strong>0</strong></span></h2>
-            <h2>losses <span id="loss-count"><strong>0</strong></span></h2>
-            <h2>draws <span id="draw-count"><strong>0</strong></span></h2>
-          </div>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <div class = "container">
+                <a class="navbar-brand" href="#">Jina Li</a>
+                <div class="collapse navbar-collapse">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">About</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+        </nav>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                       <div class="page-header">
+                              <h1>Portfolio</h1>
+                            </div>
+                          </div> 
+                        </div>
+                <div class="row">
+                    <div class="col-sm-2 col-md-12">
+                        <div class="thumbnail">
+                                <img src="" alt="Homework 3">
+                                <div class="caption">
+                                    <h3>Homework 3</h3>
+                                </div>
+                        </div>
+                    </div>
+                  </div>
+
+                <div class="row">
+                    <div class="col-sm-2 col-md-12">
+                        <div class="thumbnail">
+                                <img src="" alt="Homework 4">
+                                <div class="caption">
+                                    <h3>Homework 4</h3>
+                                </div>
+                        </div>
+                    </div>
+                  </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <p> &copy; Copyright 2016</p>
         </div>
-      </div>
     </div>
+ </div>  
 
-    <script type="text/javascript">
-      var choices = ["r", "p", "s"]
-      var userText = document.getElementById("user-text");
-      var compText = document.getElementById ("comp-text");
-      var winText = document.getElementById("win-count");
-      var lossText = document.getElementById("loss-count");
-      var drawsText = document.getElementById("draw-count");
-      document.onkeyup = function(event) {
-        if (event.key ==="r" || event.key === "p" || event.key === "s"){
-          userText.textContent = event.key;
-          compText.textContent = choices[Math.floor(Math.random() * 3)];
-
-          if (userText.textContent !== compText.textContent){
-            console.log("hahahahooooooo");
-            console.log("ahahaha");
-            if (userText.textContent === "r"){
-              if(compText.textContent === "p"){
-                lossText.textContent++;
-              }
-              else if(compText.textContent ==="s"){
-                winText.textContent++;
-              }
-            }
-
-            else if (userText.textContent === "p"){
-              if(compText.textContent === "s"){
-                lossText.textContent++;
-              }
-              else if(compText.textContent === "r"){
-                winText.textContent++;
-              }
-            }
-
-            else if (userText.textContent === "s"){
-              if(compText.textContent === "r"){
-                lossText.textContent++;
-              }
-              else if(compText.textContent === "p"){
-                winText.textContent++;
-              }
-            }
-
-          }
-
-          else if (userText.textContent === compText.textContent){
-            console.log("hahahaha");
-            drawsText.textContent ++;
-          }
-
-
-        } 
-      }
-
-
-
-
-    </script>
-  </body>
+</body>
 </html>
